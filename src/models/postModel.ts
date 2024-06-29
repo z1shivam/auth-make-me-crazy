@@ -18,6 +18,10 @@ const PostSchema: Schema = new Schema(
       trim: true,
       maxlength: 100,
     },
+    featuredImage: {
+      type: String,
+      trim: true,
+    },
     author: {
       type: string,
       required: true,
