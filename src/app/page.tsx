@@ -1,15 +1,10 @@
-"use client"
-
 import { Button } from "@/components/ui/button";
 
-export default function HomePage() {
-  const clickHandler = () => {
-    console.log("I told you not to click");
-  };
+export default async function HomePage() {
   return (
     <main>
       <h1 className="text-emerald-600">Shivam can code!!</h1>
-      <Button onClick={clickHandler}>Dont click</Button>
+      <Button>Dont click</Button>
     </main>
   );
 }
