@@ -2,8 +2,8 @@ import mongoose, { Document, Model, Schema } from "mongoose";
 
 export interface IUser extends Document {
   name: string;
-  email: string;
-  password?: string; // Marked password as optional
+  username: string;
+  password?: string;
 }
 
 const UserSchema: Schema = new Schema({
@@ -11,7 +11,7 @@ const UserSchema: Schema = new Schema({
     type: String,
     required: true,
   },
-  email: {
+  username: {
     type: String,
     unique: true,
     trim: true,
@@ -19,10 +19,11 @@ const UserSchema: Schema = new Schema({
   },
   password: {
     type: String,
-    required: false, // Marked as not required
+    required: false,
   },
 });
 
-const User: Model<IUser> = mongoose.models?.User || mongoose.model<IUser>("User", UserSchema);
+const User: Model<IUser> =
+  mongoose.models?.User || mongoose.model<IUser>("User", UserSchema);
 
 export default User;
