@@ -1,6 +1,7 @@
+"use client"
 import { Button } from "@/components/ui/button";
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
     <main>
       <h1 className="text-emerald-600">Shivam can code!!</h1>
